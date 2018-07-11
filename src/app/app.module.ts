@@ -14,7 +14,9 @@ import {BiblePage} from '../pages/bible/bible';
 import {LocationPage} from '../pages/location/location';
 import {DonatePage} from '../pages/donate/donate';
 import {EventsPage} from '../pages/events/events';
-
+import { CalendarModule } from 'angular-calendar';
+import {CalendarHeaderComponent} from '../pages/events/event-utils/calendar-header.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     MyApp,
@@ -26,10 +28,13 @@ import {EventsPage} from '../pages/events/events';
     LocationPage,
     DonatePage,
     EventsPage,
+    CalendarHeaderComponent,
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    CalendarModule.forRoot(),
+    BrowserAnimationsModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -1,24 +1,3 @@
-@import "../../node_modules/angular-calendar/css/angular-calendar.css";
-// http://ionicframework.com/docs/theming/
-
-
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
-//@import "../../node_modules/angular-calendar/css/angular-calendar.css";
-
-//todo HACK, figure out how to import angular calendar css
-
 .cal-month-view .cal-header {
   text-align: center;
   font-weight: bolder; }
@@ -30,7 +9,7 @@
   padding: 5px 0;
   overflow: hidden;
   -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+     text-overflow: ellipsis;
   display: block;
   white-space: nowrap; }
 
@@ -45,8 +24,8 @@
 .cal-month-view .cal-cell-top {
   min-height: 78px;
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1; }
+      -ms-flex: 1;
+          flex: 1; }
 
 .cal-month-view .cal-cell-row {
   display: -webkit-box;
@@ -57,19 +36,19 @@
 .cal-month-view .cal-cell {
   float: left;
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   -js-display: flex;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch; }
+      -ms-flex-align: stretch;
+          align-items: stretch; }
 
 .cal-month-view .cal-day-cell {
   min-height: 100px; }
@@ -107,11 +86,11 @@
 
 .cal-month-view .cal-events {
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   margin: 3px;
   line-height: 10px;
   display: -webkit-box;
@@ -119,7 +98,7 @@
   -js-display: flex;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+      flex-wrap: wrap; }
 
 .cal-month-view .cal-event {
   width: 10px;
@@ -158,7 +137,7 @@
   color: white;
   background-color: #555;
   -webkit-box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5);
-  box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5); }
+          box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5); }
 
 .cal-month-view .cal-open-day-events .cal-event {
   position: relative;
@@ -180,8 +159,8 @@
 
 .cal-week-view .cal-day-headers .cal-header {
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   text-align: center;
   padding: 5px; }
 
@@ -239,64 +218,64 @@
 .cal-week-view .cal-header {
   overflow: hidden;
   -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+     text-overflow: ellipsis;
   white-space: nowrap; }
 
 .cal-day-view {
   /* stylelint-disable-next-line selector-type-no-unknown */ }
-.cal-day-view .cal-hour-rows {
-  width: 100%;
-  border: solid 1px #e1e1e1;
-  overflow-x: scroll;
-  position: relative; }
-.cal-day-view .cal-hour:nth-child(odd) {
-  background-color: #fafafa; }
-.cal-day-view mwl-calendar-day-view-hour-segment,
-.cal-day-view .cal-hour-segment {
-  display: block; }
-.cal-day-view .cal-hour-segment::after {
-  content: '\00a0'; }
-.cal-day-view .cal-hour:not(:last-child) .cal-hour-segment,
-.cal-day-view .cal-hour:last-child :not(:last-child) .cal-hour-segment {
-  border-bottom: thin dashed #e1e1e1; }
-.cal-day-view .cal-time {
-  font-weight: bold;
-  padding-top: 5px;
-  width: 70px;
-  text-align: center; }
-.cal-day-view .cal-hour-segment.cal-after-hour-start .cal-time {
-  display: none; }
-.cal-day-view .cal-hour-segment:hover,
-.cal-day-view .cal-drag-over .cal-hour-segment {
-  background-color: #ededed; }
-.cal-day-view .cal-event-container {
-  position: absolute; }
-.cal-day-view .cal-event {
-  padding: 5px;
-  font-size: 12px;
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  height: 100%;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  background-color: #D1E8FF;
-  border: 1px solid #1e90ff;
-  color: #1e90ff; }
-.cal-day-view .cal-event-title:link {
-  color: currentColor; }
-.cal-day-view .cal-draggable {
-  cursor: move; }
-.cal-day-view .cal-starts-within-day .cal-event {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px; }
-.cal-day-view .cal-ends-within-day .cal-event {
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px; }
-.cal-day-view .cal-all-day-event {
-  padding: 8px;
-  border: solid 1px; }
+  .cal-day-view .cal-hour-rows {
+    width: 100%;
+    border: solid 1px #e1e1e1;
+    overflow-x: scroll;
+    position: relative; }
+  .cal-day-view .cal-hour:nth-child(odd) {
+    background-color: #fafafa; }
+  .cal-day-view mwl-calendar-day-view-hour-segment,
+  .cal-day-view .cal-hour-segment {
+    display: block; }
+  .cal-day-view .cal-hour-segment::after {
+    content: '\00a0'; }
+  .cal-day-view .cal-hour:not(:last-child) .cal-hour-segment,
+  .cal-day-view .cal-hour:last-child :not(:last-child) .cal-hour-segment {
+    border-bottom: thin dashed #e1e1e1; }
+  .cal-day-view .cal-time {
+    font-weight: bold;
+    padding-top: 5px;
+    width: 70px;
+    text-align: center; }
+  .cal-day-view .cal-hour-segment.cal-after-hour-start .cal-time {
+    display: none; }
+  .cal-day-view .cal-hour-segment:hover,
+  .cal-day-view .cal-drag-over .cal-hour-segment {
+    background-color: #ededed; }
+  .cal-day-view .cal-event-container {
+    position: absolute; }
+  .cal-day-view .cal-event {
+    padding: 5px;
+    font-size: 12px;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-color: #D1E8FF;
+    border: 1px solid #1e90ff;
+    color: #1e90ff; }
+  .cal-day-view .cal-event-title:link {
+    color: currentColor; }
+  .cal-day-view .cal-draggable {
+    cursor: move; }
+  .cal-day-view .cal-starts-within-day .cal-event {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; }
+  .cal-day-view .cal-ends-within-day .cal-event {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; }
+  .cal-day-view .cal-all-day-event {
+    padding: 8px;
+    border: solid 1px; }
 
 .cal-tooltip {
   position: absolute;
@@ -376,4 +355,3 @@
   height: 0;
   border-color: transparent;
   border-style: solid; }
-

@@ -12,11 +12,19 @@ export class HomePage implements OnInit{
   }
 
   ngOnInit () {
+    // setTimeout((() => {
+    //   this.zoomTime=true;
+    //   console.log('zoomTime',this.zoomTime);
+    // }), 200);
+    console.log('ngOnInit zoomTime',this.zoomTime);
+  }
+
+  ionViewDidLoad () {
     setTimeout((() => {
       this.zoomTime=true;
       console.log('zoomTime',this.zoomTime);
     }), 200);
-    console.log('zoomTime',this.zoomTime);
+    console.log('ionViewDidLoad zoomTime',this.zoomTime);
   }
 
 
